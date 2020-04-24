@@ -20,7 +20,8 @@ $color-disabled: #eee;
     user-select: none;
   }
 
-  &__title:before {
+  &__title::before,
+  &__title::after {
     content: '';
     position: absolute;
   }
@@ -49,13 +50,25 @@ $color-disabled: #eee;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: $control-size;
     height: $control-size;
-    line-height: $control-size;
     background: $color-bg;
     left: 0;
     top: 0;
     border-radius: 3px;
     border: 1px solid $color-border;
     transition: all 0.1s ease;
+  }
+
+  &__title::after {
+    width: $control-size;
+    height: $control-size;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzAgNzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iI2ZmZiIgcG9pbnRzPSI0Ny43MTUsMjMuNjg2IDMyLjE1OSwzOS4yNDMgMjIuMjg1LDI5LjM2OSAxOC43NDksMzIuOTA0IDMyLjE1OSw0Ni4zMTQgNTEuMjUxLDI3LjIyMiIvPjwvc3ZnPg==') no-repeat center center;
+    background-size: $control-size + 4px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.2s ease;
   }
 
   // disabled
@@ -70,11 +83,14 @@ $color-disabled: #eee;
   }
 
   // checked
-  input:checked ~ &__title:before {
+  input:checked ~ &__title::before {
     border-color: darken($color-checked, 2%);
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
-    background: $color-checked url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzAgNzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iI2ZmZiIgcG9pbnRzPSI0Ny43MTUsMjMuNjg2IDMyLjE1OSwzOS4yNDMgMjIuMjg1LDI5LjM2OSAxOC43NDksMzIuOTA0IDMyLjE1OSw0Ni4zMTQgNTEuMjUxLDI3LjIyMiIvPjwvc3ZnPg==') no-repeat center center;
-    background-size: $control-size+4px $control-size+4px;
+    background: $color-checked;
+  }
+
+  input:checked ~ &__title::after {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   // hover
@@ -111,7 +127,6 @@ $color-disabled: #eee;
   }
 
   &__title::after {
-    content: '';
     background: $color-checked;
     position: absolute;
     left: $control-size / 2 / 2;
