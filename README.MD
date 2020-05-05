@@ -1,8 +1,8 @@
 ### INIT
 install packages
 
-    $ npm install
+`$ npm install`
 
 start development
 
-    $ npm start
+`$ npm start`

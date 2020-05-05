@@ -5,80 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>xControls</title>
   <style>
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
     body {
-      background: #fefefe;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      background: #eee;
+      height: 100vh;
+      padding-top: 50px;
     }
 
     p {
       margin: 30px 50px;
       max-width: 140px;
     }
+
+    .page {
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      padding: 15px 10px;
+      box-shadow: 0 1px 5px rgba(#000, 0.8);
+    }
   </style>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-<!--checkbox-->
-<p>
-  <label class="checkbox">
-    <input type="checkbox"/><span class="checkbox__title">Checkbox</span>
-  </label>
-</p>
-<p>
-  <label class="checkbox">
-    <input type="checkbox"/><span class="checkbox__title">Checkbox second line title</span>
-  </label>
-</p>
+  <div class="page">
+    <!--checkbox-->
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" checked/>
+        <span class="checkbox__title">Checkbox</span>
+      </label>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" />
+        <span class="checkbox__title"></span>
+      </label>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox"/>
+        <span class="checkbox__title">Checkbox second line title</span>
+      </label>
+    </p>
 
-<p>
-  <label class="checkbox">
-    <input type="checkbox" disabled/><span class="checkbox__title">Checkbox</span>
-  </label>
-</p>
-<p>
-  <label class="checkbox">
-    <input type="checkbox" checked disabled/><span class="checkbox__title">Checkbox</span>
-  </label>
-</p>
-<p>
-  <label class="checkbox">
-    <input type="checkbox" checked disabled/><span class="checkbox__title"></span>
-  </label>
-</p>
-<hr>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" disabled/>
+        <span class="checkbox__title">Checkbox</span>
+      </label>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" checked disabled/>
+        <span class="checkbox__title">Checkbox</span>
+      </label>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" checked disabled/>
+        <span class="checkbox__title"></span>
+      </label>
+    </p>
+    <hr>
 
-<!--radio-->
-<p>
-  <label class="radio">
-    <input type="radio" name="radio"/><span class="radio__title">Radio</span>
-  </label>
-</p>
-<p>
-  <label class="radio">
-    <input type="radio" name="radio" checked/><span class="radio__title">Radio second line title</span>
-  </label>
-</p>
-<p>
-  <label class="radio">
-    <input type="radio" name="radio" checked/><span class="radio__title">Radio title</span>
-  </label>
-</p>
-<p>
-  <label class="radio">
-    <input type="radio" name="radio2" disabled/><span class="radio__title">Radio</span>
-  </label>
-</p>
-<p>
-  <label class="radio">
-    <input type="radio" name="radio2" disabled checked/><span class="radio__title"></span>
-  </label>
-</p>
+    <!--radio-->
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio"/>
+        <span class="radio__title">Radio</span>
+      </label>
+    </p>
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio" checked/>
+        <span class="radio__title">Radio second line title</span>
+      </label>
+    </p>
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio" disabled/>
+        <span class="radio__title">Radio title</span>
+      </label>
+    </p>
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio2" disabled/>
+        <span class="radio__title">Radio</span>
+      </label>
+    </p>
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio2" disabled checked/>
+        <span class="radio__title"></span>
+      </label>
+    </p>
+  </div>
+
+
 </body>
 </html>

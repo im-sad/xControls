@@ -53,12 +53,12 @@ const config = {
 
 // Запуск BrowserSync
 gulp.task('webserver', function () {
-	browserSync(config);
+  browserSync(config);
 });
 
 // Очищаем папки
 gulp.task('clean', function () {
-	del.sync(path.clean);
+  del.sync(path.clean);
 });
 
 // Собираем HTML
@@ -102,9 +102,9 @@ gulp.task('css', function(cb) {
 
 // Все задачи в массиве
 gulp.task('build', [
-	'clean',
-	'html:build',
-	'css'
+  'clean',
+  'html:build',
+  'css'
 ]);
 
 
