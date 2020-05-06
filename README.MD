@@ -1,8 +1,9 @@
+![Image](https://github.com/im-sad/XControls/raw/master/img.png)
+
 ### INIT
-install packages
 
 `$ npm install`
 
-start development
+### START
 
 `$ npm start`

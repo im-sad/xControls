@@ -15,11 +15,21 @@
       background: #eee;
       height: 100vh;
       padding-top: 50px;
+      font-family: 'Trebuchet MS', sans-serif;
     }
 
     p {
-      margin: 30px 50px;
-      max-width: 140px;
+      margin: 30px 0;
+      max-width: 150px;
+    }
+
+    hr {
+      width: 100%;
+      height: 1px;
+      background: #000;
+      border: none;
+      opacity: 0.06;
+      margin: 40px 0;
     }
 
     .page {
@@ -29,8 +39,9 @@
       margin-left: auto;
       margin-right: auto;
       border-radius: 5px;
-      padding: 15px 10px;
-      box-shadow: 0 1px 5px rgba(#000, 0.8);
+      padding: 15px 40px;
+      box-shadow: 0 1px 15px rgba(#000, 0.9);
+      border-bottom: 1px solid #ddd;
     }
   </style>
   <link rel="stylesheet" href="/css/main.css">
@@ -43,12 +54,6 @@
       <label class="checkbox">
         <input type="checkbox" checked/>
         <span class="checkbox__title">Checkbox</span>
-      </label>
-    </p>
-    <p>
-      <label class="checkbox">
-        <input type="checkbox" />
-        <span class="checkbox__title"></span>
       </label>
     </p>
     <p>
@@ -73,6 +78,12 @@
     <p>
       <label class="checkbox">
         <input type="checkbox" checked disabled/>
+        <span class="checkbox__title"></span>
+      </label>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" />
         <span class="checkbox__title"></span>
       </label>
     </p>
@@ -106,6 +117,12 @@
     <p>
       <label class="radio">
         <input type="radio" name="radio2" disabled checked/>
+        <span class="radio__title"></span>
+      </label>
+    </p>
+    <p>
+      <label class="radio">
+        <input type="radio" name="radio"/>
         <span class="radio__title"></span>
       </label>
     </p>
