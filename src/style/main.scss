@@ -98,16 +98,16 @@ $color-disabled: #eee;
   }
 
   // hover
-  &:hover input:not(:checked) ~ &__title:before {
+  &:hover input:not(:checked) ~ &__title::before {
     border-color: lighten($color-checked, 20%);
   }
 
-  &:hover input:checked + &__title:before {
+  &:hover input:checked + &__title::before {
     border-color: darken($color-checked, 15%);
   }
 
   // focus
-  & input:focus + &__title:before {
+  & input:focus + &__title::before {
     box-shadow: 0 0 0 2px lighten($color-checked, 40%);
   }
 }
@@ -166,20 +166,20 @@ $color-disabled: #eee;
   }
 
   // hover
-  &:hover input:not(:checked) ~ &__title:before {
+  &:hover input:not(:checked) ~ &__title::before {
     border-color: lighten($color-checked, 20%);
   }
 
-  &:hover input[disabled][checked] ~ &__title:before {// 'not(:disabled)' no work
+  &:hover input[disabled][checked] ~ &__title::before {// 'not(:disabled)' no work
     border-color: $color-border;
   }
 
-  &:hover input:checked + &__title:before {
+  &:hover input:checked + &__title::before {
     border-color: darken($color-checked, 2%);
   }
 
   // focus
-  & input:focus + &__title:before {
+  & input:focus + &__title::before {
     box-shadow: 0 0 0 2px lighten($color-checked, 40%);
   }
 }

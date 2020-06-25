@@ -12,6 +12,9 @@
     "color-no-invalid-hex": [true, {
       "message": "Неправильно написаны HEX цвета"
     }],
+    "selector-pseudo-element-colon-notation": ["double", {
+      "message": "Две точки лучше использовать"
+    }],
     "color-hex-length": ["short", {
       "message": "HEX цвета сократить можно до 3-ёх символов",
     }],
