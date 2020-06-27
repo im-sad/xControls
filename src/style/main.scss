@@ -12,6 +12,7 @@ $color-disabled: #eee;
   display: inline-block;
   vertical-align: middle;
   line-height: $control-size;
+  min-height: $control-size;
 
   &__title {
     padding-left: ($control-size + 8px);
