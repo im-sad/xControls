@@ -1,4 +1,9 @@
-$control-size: 20px;
+$control-size: 20px; // multiple of two
+$controll-padding: 8px;
+$control-raius: 3px;
+$control-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+$control-trans-time: 0.3s;
+
 $color-bg: #fff;
 $color-border: #ccc;
 $color-checked: #1f95de;
@@ -15,7 +20,7 @@ $color-disabled: #eee;
   min-height: $control-size;
 
   &__title {
-    padding-left: ($control-size + 8px);
+    padding-left: ($control-size + $controll-padding);
     display: inline-block;
     vertical-align: top;
     user-select: none;
@@ -52,15 +57,15 @@ $color-disabled: #eee;
 /* checkbox */
 .checkbox {
   &__title::before {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: $control-shadow;
     width: $control-size;
     height: $control-size;
     background: $color-bg;
     left: 0;
     top: 0;
-    border-radius: 3px;
+    border-radius: $control-raius;
     border: 1px solid $color-border;
-    transition: all 0.3s ease;
+    transition: all $control-trans-time ease;
   }
 
   &__title::after {
@@ -73,7 +78,7 @@ $color-disabled: #eee;
     position: absolute;
     opacity: 0;
     transform: translateY(-5px);
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    transition: opacity $control-trans-time ease, transform $control-trans-time ease;
   }
 
   // disabled
@@ -117,7 +122,7 @@ $color-disabled: #eee;
 /* radio */
 .radio {
   &__title::before {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: $control-shadow;
     width: $control-size;
     height: $control-size;
     line-height: $control-size;
@@ -128,7 +133,7 @@ $color-disabled: #eee;
     border: 1px solid $color-border;
     box-sizing: border-box;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all $control-trans-time ease;
   }
 
   &__title::after {
@@ -141,7 +146,7 @@ $color-disabled: #eee;
     border-radius: 50%;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all $control-trans-time ease;
     transform: scale(0);
   }
 
